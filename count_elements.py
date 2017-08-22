@@ -1,3 +1,5 @@
+import time
+
 def count_elements(given_array):
     """
     A function that count frequencies of array elements in range 1 to n
@@ -10,6 +12,7 @@ def count_elements(given_array):
              3 => 0
              4 => 1
     """
+    start = time.time();
 
     # length of the array
     n = len(given_array)
@@ -26,6 +29,10 @@ def count_elements(given_array):
         frequency = element//n
         if(frequency != 0 ):
             print(i+1, '=>' , frequency)
+
+    end = time.time()
+
+    print('Elapsed time: ', end - start, 'seconds')
 
 
 if __name__ == "__main__":
